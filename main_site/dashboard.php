@@ -20,9 +20,9 @@ $page="dashboard";
 <div class="sidenav">
     <?php include 'nav.php'; ?>
 </div>
-<div class="main">
-        <?php include 'header.php'; ?>
+<div class="main">      
         <div class="container-fluid text-white p-3">
+        <?php include 'header.php'; ?>
         <!-- deatails related to revenue starts -->
         <div class="row">
             <div class="col-xl-3 col-sm-6 p-2 mt-3">
