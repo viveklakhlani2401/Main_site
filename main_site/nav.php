@@ -1,7 +1,7 @@
 
 <main>
   <div class="d-flex flex-column  rounded-4  flex-shrink-0 p-3 bg-dark mt-3 ms-2 " style="width: 250px;">
-     <img src="img/logo.png" alt="logo" width="225rem">
+     <img src="./assets/img/logo.png" alt="logo" width="225rem">
   
     <hr class="text-light">
     <ul class="nav flex-column mb-auto ">
@@ -13,7 +13,7 @@
         </a>
       </li>
       <li class="nav-link">
-        <a href="tables.php" class="nav-link link-light <?php if ($page == 'tables') { echo "rounded-4 active bg-danger"; } ?>">
+        <a href="orders.php" class="nav-link link-light <?php if ($page == 'orders') { echo "rounded-4 active bg-danger"; } ?>">
         <i class="fa-solid fa-table me-2"></i>
           Tables
         </a>
