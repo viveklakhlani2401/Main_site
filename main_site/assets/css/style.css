@@ -1,7 +1,6 @@
 body{
     padding: 0;
     margin: 0;
-    overflow: hidden;
     background-color:#f0f2f5 !important;
 }
 
@@ -15,3 +14,32 @@ body{
     position: relative;
     top:-25px;
 }
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .sidenav {
+  
+    width: 270px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+  }
+  .main {
+    margin-left: 250px; 
+    padding: 0px 10px;
+  }
+
