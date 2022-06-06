@@ -1,6 +1,4 @@
-
-<?php
-include 'connection.php';
+<?php include 'connection.php'; 
     if(isset($_POST['sign-up']))
     {
        $s_Name=$_POST['s_Name'];
@@ -19,20 +17,20 @@ include 'connection.php';
        $s_zip=$_POST['s_zip'];
       
     //   $sql="select * from `seller_details` where `username`='$user' and `password`='$pass'";
-    $sql="INSERT INTO `seller_details`(`seller_id`, `name`, `Username`, `email`, `pass`, `gender`, `dob`, `tel_no`, `company_name`, `gst_no`, `category`, `address`, `city`, `state`, `pin_code`) VALUES (1,'$s_Name','$s_username','$s_email','$s_password','$s_gender','$s_DOB','$s_Phone','$s_CompName','$s_GST','$s_cat','$s_address','$s_city','$s_state','$s_zip')";
+    $sql="INSERT INTO `seller_details`( `name`, `Username`, `email`, `pass`, `gender`, `dob`, `tel_no`, `company_name`, `gst_no`, `category`, `address`, `city`, `state`, `pin_code`) VALUES ('$s_Name','$s_username','$s_email','$s_password','$s_gender','$s_DOB','$s_Phone','$s_CompName','$s_GST','$s_cat','$s_address','$s_city','$s_state','$s_zip')";
 
     $result=mysqli_query($db_enter,$sql);
 
+    // if(!$result)
+    // die("query failed".mysqli_error());
+    if(!$result)
+    {
+        header('location:sign-in.php');
+    }
+    else{
+        header('location:dashboard.php');
+    }
 
-    // if($rows)
-    // {
-    //   echo "success";
-    //   header('location:sign-in.php');
-    // }
-    // else{
-    //   echo 'error';
-    //   header('location:dashboard.php');
-    // }
     }
 
     ?>
@@ -265,7 +263,7 @@ include 'connection.php';
         <!-- sign-in ends -->
     </div>
 
-   
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
