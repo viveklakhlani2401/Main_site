@@ -45,7 +45,7 @@ $page="orders";
                     </div>
                 <div class="card-body px-0 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0 table-hover">
+                        <table class="table align-items-center mb-0 table-hover ">
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary font-weight-bolder">Customer</th>
@@ -99,10 +99,10 @@ $page="orders";
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
 
                                     <td class="align-middle">
@@ -149,10 +149,10 @@ $page="orders";
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
 
                                     <td class="align-middle">
@@ -199,10 +199,10 @@ $page="orders";
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
 
                                     <td class="align-middle">
@@ -249,10 +249,10 @@ $page="orders";
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                                     </td>
 
                                     <td class="align-middle">

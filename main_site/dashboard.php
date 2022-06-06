@@ -182,10 +182,10 @@ $page="dashboard";
                           </td>
 
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                            <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                            <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                           </td>
                         </tr>
                           
@@ -223,10 +223,10 @@ $page="dashboard";
                             </td>
   
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                           </tr>
 
@@ -264,10 +264,10 @@ $page="dashboard";
                             </td>
   
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                           </tr>
 
@@ -305,10 +305,10 @@ $page="dashboard";
                             </td>
   
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                             <td class="align-middle text-center">
-                              <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                              <p class="text-secondary text-xs font-weight-bold">23/04/18</p>
                             </td>
                           </tr>
                       </tbody>

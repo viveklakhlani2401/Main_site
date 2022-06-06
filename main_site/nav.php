@@ -37,7 +37,7 @@
         </a>
       </li> 
     <hr class="text-light" style="margin-top:230px;">
-      <li class="text-center">
+      <li class="text-center nav-link">
         <a href="#" class="rounded-4 nav-link text-white active bg-danger">
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         <strong>Log-out</strong>

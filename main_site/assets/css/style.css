@@ -56,6 +56,39 @@ body{
 
 .form-switch .form-check-input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0, 0, 0, 1)'/%3e%3c/svg%3e") !important;
-  box-shadow: 0px 0px 3px 1px rgba(220, 53, 70, 0.5) !important;
-  border-color:transparent !important;
+  box-shadow: 0px 0px 3px 3px rgba(220, 53, 70, 0.5) !important;
+  border-color:black !important;
 }
+
+/* jay starts */
+
+.form-control:focus,.form-select:focus{
+  border:1px solid #dc3545 !important;
+  box-shadow: 0px 0px 5px 5px rgba(220, 53, 70,0.4) !important;
+}
+
+
+.form-check-input:focus{
+  box-shadow: 0px 0px 2px 3px rgba(220, 53, 70,0.4) !important;
+}
+
+.table-hover tr:hover{
+  background-color:rgba(220, 53, 70, 0.2);
+}
+
+.nav-link a{
+  border-radius: 15px;
+}
+
+.nav-link a:hover{
+  background-color:white !important;
+  color:black !important;
+  border-radius: 15px;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav-link a:hover .nav-link i{
+  color:black !important;
+}
+
+/* jay ends */

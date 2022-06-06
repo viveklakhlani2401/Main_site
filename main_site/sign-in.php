@@ -19,13 +19,13 @@
                 <div class="card my-4 shadow">
                     <div class="card-header p-0 bg-danger shadow rounded-5 pt-4 pb-3 mx-4" style="top:-50px">
                         <div class="text-center">
-                            <h6 class="text-white text-capitalize p-4 fs-2">sign in</h6>
+                            <h6 class="text-white text-capitalize p-2 fs-2">sign in</h6>
                         </div>
                     </div>
                     <div class="card-body px-5 pb-2" style="top:-30px; position: relative;">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput " placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input type="text" class="form-control" id="floatingInput " placeholder="name@example.com">
+                            <label for="floatingInput">Username</label>
                           </div>
                           <div class="form-floating mb-3">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
