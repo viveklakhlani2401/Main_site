@@ -1,4 +1,5 @@
 <?php include 'connection.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,24 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script>
+        function chk_name() {
+            var pattern = /[a-zA-z]$/;
+            if (!pattern.test(s_Name.value)) {
+                err_s_name.style.color = "red";
+                err_s_name.innerHTML = "*Enter a vaild Name";
+                s_Name.focus();
+                return;
+            }
+            else
+                err_s_name.style.color = "green";
+                err_s_name.innerHTML = "good";
+                s_username.focus();
+        }
+    </script>
 </head>
+
 
 <body>
 
@@ -35,10 +53,8 @@
                                         <div class="col-sm-6">
                                             <label for="s_Name" class="form-label">First name</label>
                                             <input type="text" class="form-control" name="s_Name" id="s_Name"
-                                                placeholder="Jhon" value="" required="">
-                                            <div class="invalid-feedback">
-                                                Valid name is required.
-                                            </div>
+                                                placeholder="Jhon" onblur='chk_name();'>
+                                            <p id="err_s_name"></p>
                                         </div>
 
                                         <div class="col-sm-6">
@@ -66,15 +82,15 @@
                                             <label for="s_gender" class="form-label">Gender</label>
                                             <div class="d-flex">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="s_gender"
-                                                        id="s_Male">
+                                                    <input class="form-check-input" value="male" type="radio"
+                                                        name="s_gender" id="s_Male">
                                                     <label class="form-check-label" for="Male">
                                                         Male
                                                     </label>
                                                 </div>
                                                 <div class="form-check ms-3">
-                                                    <input class="form-check-input" type="radio" name="s_gender"
-                                                        id="s_Female" checked>
+                                                    <input class="form-check-input" type="radio" value="female"
+                                                        name="s_gender" id="s_Female" checked>
                                                     <label class="form-check-label" for="Female">
                                                         Female
                                                     </label>
@@ -158,7 +174,7 @@
 
                                         <div class="col-md-4">
                                             <label for="s_country" class="form-label">State</label>
-                                            <select class="form-select" id="s_country" name="s_country" required="">
+                                            <select class="form-select" id="s_state" name="s_state" required="">
                                                 <option value="">Choose...</option>
                                                 <option>United States</option>
                                             </select>
@@ -169,7 +185,7 @@
 
                                         <div class="col-md-4">
                                             <label for="s_state" class="form-label">City</label>
-                                            <select class="form-select" id="s_state" name="s_state" required="">
+                                            <select class="form-select" id="s_city" name="s_city" required="">
                                                 <option value="">Choose...</option>
                                                 <option>California</option>
                                             </select>
@@ -191,8 +207,8 @@
 
                                 <div class="col-12 ">
                                     <div class="d-grid mt-5 mx-auto col-4 ">
-                                        <button class="btn btn-gradient btn-outline-danger shadow btn-lg" name='sign-up'
-                                            type="submit">Submit</button>
+                                        <input class="btn btn-gradient btn-outline-danger shadow btn-lg" name='sign-up'
+                                            type="submit" value="submit">
                                     </div>
                                     <div class="text-center pt-0 px-lg-2 px-1 mt-3">
                                         <p class="mb-2 text-sm mx-auto">
@@ -219,33 +235,36 @@
        $s_username=$_POST['s_username'];
        $s_email=$_POST['s_email'];
        $s_gender=$_POST['s_gender'];
+       $s_DOB=$_POST['s_DOB'];
        $s_password=$_POST['s_password'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
-       $s_Name=$_POST['s_Name'];
+       $s_Phone=$_POST['s_Phone'];
+       $s_CompName=$_POST['s_CompName'];
+       $s_GST=$_POST['s_GST'];
+       $s_cat=$_POST['s_cat'];
+       $s_address=$_POST['s_address'];
+       $s_state=$_POST['s_state'];
+       $s_city=$_POST['s_city'];
+       $s_zip=$_POST['s_zip'];
       
-      $sql="select * from `seller_user` where `username`='$user' and `password`='$pass'";
+    //   $sql="select * from `seller_details` where `username`='$user' and `password`='$pass'";
+    $sql="INSERT INTO `seller_details`( `name`, `Username`, `email`, `pass`, `gender`, `dob`, `tel_no`, `company_name`, `gst_no`, `category`, `address`, `city`, `state`, `pin_code`) VALUES ('$s_name','$s_username','$s_email','$s_password','$s_gender','$s_DOB','$s_Phone','$s_CompName','$s_GST','$s_cat','$s_address','$s_city','$s_state','$s_zip')";
 
-      $result=mysqli_query($db_enter,$sql);
+    $result=mysqli_query($db_enter,$sql);
 
-      if(!$result)
-      die("query failed".mysqli_error());
+    if(!$result)
+    die("query failed".mysqli_error());
 
-      $rows=mysqli_num_rows($result);
+    $rows=mysqli_num_rows($result);
 
-      if($rows)
-      {
-        echo "success";
-      }
-      else{
-        echo 'error';
-      }
+    if($rows)
+    {
+      echo "success";
+      header('location:sign-in.php');
+    }
+    else{
+      echo 'error';
+      header('location:dashboard.php');
+    }
     }
 
     ?>
