@@ -1,3 +1,33 @@
+<?php
+include 'connection.php';
+
+    if(isset($_POST['sign-in']))
+    {
+       $Name=$_POST['s_username'];
+       $Password=$_POST['s_password'];
+      
+      
+      $sql="select * from `seller_details` where `Username`='$Name' and `pass`='$Password'";
+
+      $result=mysqli_query($db_enter,$sql);
+
+      if(!$result)
+      die("query failed".mysqli_error());
+
+      $rows=mysqli_num_rows($result);
+
+      if($rows)
+      {
+        echo "success";
+        header('location:dashboard.php');
+      }
+      else{
+        echo 'error';
+        header('location:sign-in.php');
+      }
+    }
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,20 +53,21 @@
                         </div>
                     </div>
                     <div class="card-body px-5 pb-2" style="top:-30px; position: relative;">
+                    <form method="post">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput " placeholder="name@example.com">
+                            <input type="text" class="form-control" name="s_username" id="s_username" placeholder="name@example.com">
                             <label for="floatingInput">Username</label>
                           </div>
                           <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" name="s_password" id="s_password" placeholder="Password">
                             <label for="floatingPassword">Password</label>
                           </div>
                           <div class="form-check form-switch mb-4">
-                            <input class="form-check-input" type="checkbox" role="switch" id="remember-me" />
+                            <input class="form-check-input" type="checkbox" role="switch" name="remember-me" />
                             <label class="form-check-label" for="remember-me">remember me</label>
                           </div>
                           <div class="d-grid mb-3">
-                            <button class="btn btn-gradient btn-outline-danger shadow btn-lg" type="button">Sign in</button>
+                            <input class="btn btn-gradient btn-outline-danger shadow btn-lg" name="sign-in" type="submit" value="Sign in">
                           </div>
                           <div class="text-center pt-0 px-lg-2 px-1 ">
                             <p class="mb-2 text-sm mx-auto">
@@ -44,13 +75,16 @@
                               <a href="sign-up.php" class="text-danger text-gradient font-weight-bold">Sign up</a>
                             </p>
                           </div>
-                    </div>
+                        </div>
+                      </form>
                 </div>
             </div>
         </div>
 
         <!-- sign-in ends -->
     </div>
+    
+    
 </body>
 
 </html>

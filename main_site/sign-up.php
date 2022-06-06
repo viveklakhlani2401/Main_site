@@ -1,4 +1,41 @@
-<?php include 'connection.php'; ?>
+
+<?php
+include 'connection.php';
+    if(isset($_POST['sign-up']))
+    {
+       $s_Name=$_POST['s_Name'];
+       $s_username=$_POST['s_username'];
+       $s_email=$_POST['s_email'];
+       $s_gender=$_POST['s_gender'];
+       $s_DOB=$_POST['s_DOB'];
+       $s_password=$_POST['s_password'];
+       $s_Phone=$_POST['s_Phone'];
+       $s_CompName=$_POST['s_CompName'];
+       $s_GST=$_POST['s_GST'];
+       $s_cat=$_POST['s_cat'];
+       $s_address=$_POST['s_address'];
+       $s_state=$_POST['s_state'];
+       $s_city=$_POST['s_city'];
+       $s_zip=$_POST['s_zip'];
+      
+    //   $sql="select * from `seller_details` where `username`='$user' and `password`='$pass'";
+    $sql="INSERT INTO `seller_details`(`seller_id`, `name`, `Username`, `email`, `pass`, `gender`, `dob`, `tel_no`, `company_name`, `gst_no`, `category`, `address`, `city`, `state`, `pin_code`) VALUES (1,'$s_Name','$s_username','$s_email','$s_password','$s_gender','$s_DOB','$s_Phone','$s_CompName','$s_GST','$s_cat','$s_address','$s_city','$s_state','$s_zip')";
+
+    $result=mysqli_query($db_enter,$sql);
+
+
+    // if($rows)
+    // {
+    //   echo "success";
+    //   header('location:sign-in.php');
+    // }
+    // else{
+    //   echo 'error';
+    //   header('location:dashboard.php');
+    // }
+    }
+
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -228,46 +265,7 @@
         <!-- sign-in ends -->
     </div>
 
-    <?php
-    if(isset($_POST['sign-up']))
-    {
-       $s_Name=$_POST['s_Name'];
-       $s_username=$_POST['s_username'];
-       $s_email=$_POST['s_email'];
-       $s_gender=$_POST['s_gender'];
-       $s_DOB=$_POST['s_DOB'];
-       $s_password=$_POST['s_password'];
-       $s_Phone=$_POST['s_Phone'];
-       $s_CompName=$_POST['s_CompName'];
-       $s_GST=$_POST['s_GST'];
-       $s_cat=$_POST['s_cat'];
-       $s_address=$_POST['s_address'];
-       $s_state=$_POST['s_state'];
-       $s_city=$_POST['s_city'];
-       $s_zip=$_POST['s_zip'];
-      
-    //   $sql="select * from `seller_details` where `username`='$user' and `password`='$pass'";
-    $sql="INSERT INTO `seller_details`( `name`, `Username`, `email`, `pass`, `gender`, `dob`, `tel_no`, `company_name`, `gst_no`, `category`, `address`, `city`, `state`, `pin_code`) VALUES ('$s_name','$s_username','$s_email','$s_password','$s_gender','$s_DOB','$s_Phone','$s_CompName','$s_GST','$s_cat','$s_address','$s_city','$s_state','$s_zip')";
-
-    $result=mysqli_query($db_enter,$sql);
-
-    if(!$result)
-    die("query failed".mysqli_error());
-
-    $rows=mysqli_num_rows($result);
-
-    if($rows)
-    {
-      echo "success";
-      header('location:sign-in.php');
-    }
-    else{
-      echo 'error';
-      header('location:dashboard.php');
-    }
-    }
-
-    ?>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
